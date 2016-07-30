@@ -4,6 +4,7 @@
   "description": "Gazzette guess is a game where you get to guess what year a news article came fromwq",
   "main": "index.js",
   "scripts": {
+    "start:development": "NODE_ENV=development nodemon --watch .env --watch server --watch common --ext js,json --ignore client/dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ersin",
