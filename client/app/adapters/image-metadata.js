@@ -22,5 +22,11 @@ export default DS.Adapter.extend({
   },
   findAll (store, type, sinceToken) {
     return get(this, 'ajax').request(get(this, 'host') + get(this, 'namespace') + '/data.json')
+  },
+  query (storepe, type, query) {
+    return get(this, 'ajax').request(get(this, 'host') + get(this, 'namespace') + '/data.json', {
+      method: 'GET',
+      data: query
+    })
   }
 })

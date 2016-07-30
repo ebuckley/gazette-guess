@@ -2,17 +2,18 @@ const envoodoo = require('envoodoo')
 const express = require('express')
 const request = require('request-promise-native')
 const cheerio = require('cheerio')
+const url = require('url')
 const app = express()
 envoodoo()
 
-const DATA_URL = `http://api.digitalnz.org/records.json?api_key=${process.env.API_KEY}&and[tag]=WW100+-+Official+war+series&and[primary_collection]=TAPUHI`
 const image_url = id => `http://natlib.govt.nz/records/${id}`
 const image_source_selector = '#content > img'
 
-var image_metadata = {}
-
-app.get('/', (req, res) => {
-  res.send('hello world')
+app.use((req, res, next) => {
+  // lol security
+  res.header('Access-Control-Allow-Origin', '*')
+  res.header('content-type', 'application/json')
+  next()
 })
 
 app.get('/api/image/:id', (req, res) => {
@@ -41,22 +42,31 @@ app.get('/api/image/:id', (req, res) => {
 })
 
 app.get('/api/data.json', (req, res) => {
-  res.header('content-type', 'application/json')
-  res.send(image_metadata)
+  const page = req.query.page || 1
+  getImageMetaData(page)
+    .then((data) => res.send(data))
+    .catch(err => {
+      console.error('failed to handle err', err)
+      res.status(500)
+      res.send({message: 'bad request for data'})
+    })
 })
 
-// frontload the datas
-request(DATA_URL)
-.then(datas => {
-  image_metadata = datas
-  console.log('loaded image metadata from ', image_metadata)
-  app.listen(process.env.PORT, (err) => {
-    if (err) {
-      console.error('it broke when starting the server...!', err)
+const getImageMetaData = page => {
+  const DATA_URL = `http://api.digitalnz.org/records.json?api_key=${process.env.API_KEY}&and[tag]=WW100+-+Official+war+series&and[primary_collection]=TAPUHI`
+  const parsedURL = url.parse(DATA_URL)
+  return request({
+    uri: parsedURL,
+    qs: {
+      page,
+      sort: 'date'
     }
-    console.log('server listening on 0.0.0.0:' + process.env.PORT)
   })
-})
-.catch((err) => {
-  console.error('wtf! failed to get image metadata', err)
+}
+
+app.listen(process.env.PORT, (err) => {
+  if (err) {
+    console.error('it broke when starting the server...!', err)
+  }
+  console.log('server listening on 0.0.0.0:' + process.env.PORT)
 })
