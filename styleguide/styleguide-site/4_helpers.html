@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>4 Helpers &ndash; Ember Style Guide</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="assets/ember-styleguide.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+
+          
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            1 Colors
+          </a>
+          
+          <a href="2_typography_&_icons.html"
+             class="hgt-pagehead-nav-item ">
+            2 Typography & Icons
+          </a>
+          
+          <a href="3_layout.html"
+             class="hgt-pagehead-nav-item ">
+            3 Layout
+          </a>
+          
+          <a href="4_helpers.html"
+             class="hgt-pagehead-nav-item selected">
+            4 Helpers
+          </a>
+          
+          <a href="5_components.html"
+             class="hgt-pagehead-nav-item ">
+            5 Components
+          </a>
+          
+          <a href="6_forms.html"
+             class="hgt-pagehead-nav-item ">
+            6 Forms
+          </a>
+          
+          <a href="7_tables.html"
+             class="hgt-pagehead-nav-item ">
+            7 Tables
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Ember Style Guide</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#1-helpers" class="hgt-menu-item">Helpers</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<h1 id="1-helpers" class="styleguide">Helpers</h1>
+
+<h3>Clearfix</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="clearfix bg-grey-dark">
+  <div class="bg-grey" style="width: 50%;height: 50px;float: left;"></div>
+  <div class="bg-grey-light" style="width: 50%;height: 30px;float: left;"></div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix bg-grey-dark"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-grey"</span> <span class="na">style=</span><span class="s">"width: 50%;height: 50px;float: left;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"bg-grey-light"</span> <span class="na">style=</span><span class="s">"width: 50%;height: 30px;float: left;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Float left</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="clearfix">
+  <div class="float-left bg-grey" style="width: 20px;height: 20px;"></div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-left bg-grey"</span> <span class="na">style=</span><span class="s">"width: 20px;height: 20px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Float right</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="clearfix">
+  <div class="float-right bg-grey" style="width: 20px;height: 20px;"></div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-right bg-grey"</span> <span class="na">style=</span><span class="s">"width: 20px;height: 20px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margin bottom (5px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-btm-5">First Item</div>
+<div>Second Item</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-btm-5"</span><span class="nt">&gt;</span>First Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div&gt;</span>Second Item<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margin bottom (10px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-btm-10">First Item</div>
+<div>Second Item</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-btm-10"</span><span class="nt">&gt;</span>First Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div&gt;</span>Second Item<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margin bottom (15px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-btm-15">First Item</div>
+<div>Second Item</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-btm-15"</span><span class="nt">&gt;</span>First Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div&gt;</span>Second Item<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margin bottom (20px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-btm-20">First Item</div>
+<div>Second Item</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-btm-20"</span><span class="nt">&gt;</span>First Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div&gt;</span>Second Item<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margin bottom (30px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-btm-30">First Item</div>
+<div>Second Item</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-btm-30"</span><span class="nt">&gt;</span>First Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div&gt;</span>Second Item<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margin bottom (40px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-btm-40">First Item</div>
+<div>Second Item</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-btm-40"</span><span class="nt">&gt;</span>First Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div&gt;</span>Second Item<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margin bottom (50px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-btm-50">First Item</div>
+<div>Second Item</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-btm-50"</span><span class="nt">&gt;</span>First Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div&gt;</span>Second Item<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Margins left &amp; right</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="nav-style margin-btm-20">
+  <li><a href="#" class="nav-item bg-grey-light">No margin left</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-5">Item one</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-10">Item two</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-15">Item three</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-20">Item four</a></li>
+  <li><a href="#" class="nav-item bg-grey-light">No margin left</a></li>
+</ul>
+
+<ul class="nav-style">
+  <li><a href="#" class="nav-item bg-grey-light">No margin right</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-5">Item one</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-10">Item two</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-15">Item three</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-20">Item four</a></li>
+  <li><a href="#" class="nav-item bg-grey-light">No margin right</a></li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav-style margin-btm-20"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light"</span><span class="nt">&gt;</span>No margin left<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-left-5"</span><span class="nt">&gt;</span>Item one<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-left-10"</span><span class="nt">&gt;</span>Item two<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-left-15"</span><span class="nt">&gt;</span>Item three<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-left-20"</span><span class="nt">&gt;</span>Item four<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light"</span><span class="nt">&gt;</span>No margin left<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav-style"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light"</span><span class="nt">&gt;</span>No margin right<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-right-5"</span><span class="nt">&gt;</span>Item one<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-right-10"</span><span class="nt">&gt;</span>Item two<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-right-15"</span><span class="nt">&gt;</span>Item three<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light margin-right-20"</span><span class="nt">&gt;</span>Item four<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light"</span><span class="nt">&gt;</span>No margin right<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Hide element on mobile (screen width &lt; 768px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="hide-mob">Hidden on mobile (resize window to test)</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hide-mob"</span><span class="nt">&gt;</span>Hidden on mobile (resize window to test)<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Hide element on portrait tablet up (screen width &gt;= 768px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="hide-tablet-up">Hidden on tablet up (resize window to test)</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hide-tablet-up"</span><span class="nt">&gt;</span>Hidden on tablet up (resize window to test)<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Hide element on desktop screens (screen width &gt;= 1024px)</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="hide-desktop">Hidden on desktop (resize window to test)</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hide-desktop"</span><span class="nt">&gt;</span>Hidden on desktop (resize window to test)<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>

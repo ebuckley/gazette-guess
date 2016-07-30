@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>5 Components &ndash; Ember Style Guide</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="assets/ember-styleguide.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+
+          
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            1 Colors
+          </a>
+          
+          <a href="2_typography_&_icons.html"
+             class="hgt-pagehead-nav-item ">
+            2 Typography & Icons
+          </a>
+          
+          <a href="3_layout.html"
+             class="hgt-pagehead-nav-item ">
+            3 Layout
+          </a>
+          
+          <a href="4_helpers.html"
+             class="hgt-pagehead-nav-item ">
+            4 Helpers
+          </a>
+          
+          <a href="5_components.html"
+             class="hgt-pagehead-nav-item selected">
+            5 Components
+          </a>
+          
+          <a href="6_forms.html"
+             class="hgt-pagehead-nav-item ">
+            6 Forms
+          </a>
+          
+          <a href="7_tables.html"
+             class="hgt-pagehead-nav-item ">
+            7 Tables
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Ember Style Guide</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#0-buttons" class="hgt-menu-item">Buttons</a>
+                
+              
+                
+                  <a href="#1-tabs" class="hgt-menu-item">Tabs</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<h1 id="0-buttons" class="styleguide">Buttons</h1>
+
+<h3>Default Buttons</h3>
+<p class="styleguide">Any element with a class containing <code class="styleguide">default-btn</code> will inherit default button
+styling (as displayed below).</p><p class="styleguide">Different colored buttons can be created either by creating a style such as
+<code class="styleguide">default-btn-orange</code> or <code class="styleguide">default-btn-primary</code> (as used below) and setting the
+background and text color (as well as :hover and :active states if required).</p><p class="styleguide">Alternatively, you can determine button colors on the fly in the markup by using
+existing color helper classes (as the last example below shows). Just be aware
+button styles created using this method won&#39;t have any rollover/active states by
+default.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <a href="#" class="default-btn-primary">Anchor Tag</a>
+<a href="#" class="default-btn-disabled">Anchor Tag</a>
+<br/><br/>
+<button class="default-btn-primary">Button</button>
+<button class="default-btn-disabled">Button</button>
+<button class="link-style">Button</button>
+<br/><br/>
+<button class="default-btn bg-orange text-white">Button</button>
+<button class="default-btn bg-grey-dark text-white">Button</button>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"default-btn-primary"</span><span class="nt">&gt;</span>Anchor Tag<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"default-btn-disabled"</span><span class="nt">&gt;</span>Anchor Tag<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;br/&gt;&lt;br/&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"default-btn-primary"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"default-btn-disabled"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"link-style"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;br/&gt;&lt;br/&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"default-btn bg-orange text-white"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"default-btn bg-grey-dark text-white"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Small Buttons</h3>
+<p class="styleguide">You can add the class <code class="styleguide">.default-btn-small</code> to create a smaller version. You may
+need to include multiple classes if you&#39;re wanting to determine the color also.
+For instance, if I wanted a small button the same color as the primary project
+color, I&#39;d apply the following classes: <code class="styleguide">.default-btn-primary .default-btn-small</code></p><div class="codeExample">
+  <div class="exampleOutput">
+    <a href="#" class="default-btn-primary default-btn-small">Small Button</a>
+<a href="#" class="default-btn-disabled default-btn-small">Small Button</a>
+<br/><br/>
+<button class="default-btn-primary default-btn-small">Small Button</button>
+<button class="default-btn-disabled default-btn-small">Small Button</button>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"default-btn-primary default-btn-small"</span><span class="nt">&gt;</span>Small Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"default-btn-disabled default-btn-small"</span><span class="nt">&gt;</span>Small Button<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;br/&gt;&lt;br/&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"default-btn-primary default-btn-small"</span><span class="nt">&gt;</span>Small Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"default-btn-disabled default-btn-small"</span><span class="nt">&gt;</span>Small Button<span class="nt">&lt;/button&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="1-tabs" class="styleguide">Tabs</h1>
+<p class="styleguide">The two examples below show two different layout options:</p><ul class="styleguide"><li>Tabs for use inside a container (<code class="styleguide">.max-1210</code> for example) or grid column
+(<code class="styleguide">.col-1-2</code> for example). The tabs will sit flush with the left side of the container
+with the baseline extending out to the full-width of the containing element.</li>
+<li>Tabs for use outside of a container that need the baseline to span the width
+of the screen. The tabs are intended to be centered with a max-width by using a
+container class on the <code class="styleguide">.tabs-wrap</code> element (such as <code class="styleguide">.max-1210</code>).</li>
+</ul><p class="styleguide">Both styles of tabs will stack on screens smaller than 768px.</p><p class="styleguide">Styling of tab text/background/border colors can easily be adjusted using the appropriately
+named SASS variables defined above the main tab styles in the <code class="styleguide">_components.scss</code> file.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="tabs-wrap">
+  <li class="tab-item"><a href="#" class="tab-link active">Tab One</a></li>
+  <li class="tab-item"><a href="#" class="tab-link">Tab Two</a></li>
+  <li class="tab-item"><a href="#" class="tab-link">Tab Three</a></li>
+  <li class="tab-item"><a href="#" class="tab-link">Tab Four</a></li>
+</ul>
+<br/><br/>
+<div class="full-width-tabs-wrap">
+  <ul class="tabs-wrap max-1210">
+    <li class="tab-item"><a href="#" class="tab-link">Tab One</a></li>
+    <li class="tab-item"><a href="#" class="tab-link active">Tab Two</a></li>
+    <li class="tab-item"><a href="#" class="tab-link">Tab Three</a></li>
+    <li class="tab-item"><a href="#" class="tab-link">Tab Four</a></li>
+  </ul>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tabs-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link active"</span><span class="nt">&gt;</span>Tab One<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link"</span><span class="nt">&gt;</span>Tab Two<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link"</span><span class="nt">&gt;</span>Tab Three<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link"</span><span class="nt">&gt;</span>Tab Four<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;br/&gt;&lt;br/&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full-width-tabs-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"tabs-wrap max-1210"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link"</span><span class="nt">&gt;</span>Tab One<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link active"</span><span class="nt">&gt;</span>Tab Two<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link"</span><span class="nt">&gt;</span>Tab Three<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"tab-item"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"tab-link"</span><span class="nt">&gt;</span>Tab Four<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>

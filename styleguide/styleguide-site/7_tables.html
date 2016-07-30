@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>7 Tables &ndash; Ember Style Guide</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="assets/ember-styleguide.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+
+          
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            1 Colors
+          </a>
+          
+          <a href="2_typography_&_icons.html"
+             class="hgt-pagehead-nav-item ">
+            2 Typography & Icons
+          </a>
+          
+          <a href="3_layout.html"
+             class="hgt-pagehead-nav-item ">
+            3 Layout
+          </a>
+          
+          <a href="4_helpers.html"
+             class="hgt-pagehead-nav-item ">
+            4 Helpers
+          </a>
+          
+          <a href="5_components.html"
+             class="hgt-pagehead-nav-item ">
+            5 Components
+          </a>
+          
+          <a href="6_forms.html"
+             class="hgt-pagehead-nav-item ">
+            6 Forms
+          </a>
+          
+          <a href="7_tables.html"
+             class="hgt-pagehead-nav-item selected">
+            7 Tables
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Ember Style Guide</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#1-table-styling" class="hgt-menu-item">Table Styling</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<h1 id="1-table-styling" class="styleguide">Table Styling</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <table>
+  <tr>
+    <th>ID</th>
+    <th>Table Column 1</th>
+    <th>Table Column 2</th>
+    <th>Table Column 3</th>
+    <th class="align-right">Table Column 4</th>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">1</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">2</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">3</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">4</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+</table>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;table&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;th&gt;</span>ID<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th&gt;</span>Table Column 1<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th&gt;</span>Table Column 2<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th&gt;</span>Table Column 3<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;th</span> <span class="na">class=</span><span class="s">"align-right"</span><span class="nt">&gt;</span>Table Column 4<span class="nt">&lt;/th&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"bold"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"align-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>View<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"bold"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"align-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>View<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"bold"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"align-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>View<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"bold"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"align-right"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>View<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Edit<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"margin-left-5"</span><span class="nt">&gt;</span>Delete<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/table&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>

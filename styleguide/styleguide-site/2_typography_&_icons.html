@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>2 Typography & Icons &ndash; Ember Style Guide</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="styles/hgt-syntax.css">
+    <link rel="stylesheet" href="styles/hgt.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="assets/ember-styleguide.css">
+      
+    
+</head>
+
+  <body class="hgt-body">
+    <div class="hgt-pagehead">
+      <div class="hgt-container">
+        <nav class="hgt-pagehead-nav" role="navigation">
+
+          
+          
+          <a href="index.html"
+             class="hgt-pagehead-nav-item ">
+            1 Colors
+          </a>
+          
+          <a href="2_typography_&_icons.html"
+             class="hgt-pagehead-nav-item selected">
+            2 Typography & Icons
+          </a>
+          
+          <a href="3_layout.html"
+             class="hgt-pagehead-nav-item ">
+            3 Layout
+          </a>
+          
+          <a href="4_helpers.html"
+             class="hgt-pagehead-nav-item ">
+            4 Helpers
+          </a>
+          
+          <a href="5_components.html"
+             class="hgt-pagehead-nav-item ">
+            5 Components
+          </a>
+          
+          <a href="6_forms.html"
+             class="hgt-pagehead-nav-item ">
+            6 Forms
+          </a>
+          
+          <a href="7_tables.html"
+             class="hgt-pagehead-nav-item ">
+            7 Tables
+          </a>
+          
+        </nav>
+
+        <h1 class="hgt-pagehead-title">Ember Style Guide</h1>
+      </div>
+    </div>
+
+    <div class="hgt-styleguide hgt-container">
+      <div class="hgt-columns">
+        
+          <div class="hgt-column one-fourth">
+            <nav class="hgt-menu">
+              
+                
+                  <a href="#1-primary-font" class="hgt-menu-item">Primary Font</a>
+                
+              
+                
+                  <a href="#2-secondary-font" class="hgt-menu-item">Secondary Font</a>
+                
+              
+                
+                  <a href="#3-headings" class="hgt-menu-item">Headings</a>
+                
+              
+                
+                  <a href="#4-font-sizing" class="hgt-menu-item">Font Sizing</a>
+                
+              
+                
+                  <a href="#5-links" class="hgt-menu-item">Links</a>
+                
+              
+                
+                  <a href="#6-lists" class="hgt-menu-item">Lists</a>
+                
+              
+                
+                  <a href="#7-text-helpers" class="hgt-menu-item">Text Helpers</a>
+                
+              
+                
+                  <a href="#8-icons" class="hgt-menu-item">Icons</a>
+                
+              
+            </nav>
+          </div>
+        
+
+        <div class="hgt-column three-fourths">
+          <div class="hgt-content">
+<h1 id="1-primary-font" class="styleguide">Primary Font</h1>
+
+<h3>Helvetica (primary font)</h3>
+<p class="styleguide">Default font family used for all body text.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <p class="primary-font">Lorem ipsum dolor sit amet</p>
+<p class="primary-font-italic">Lorem ipsum dolor sit amet</p>
+<p class="primary-font-bold">Lorem ipsum dolor sit amet</p>
+<p class="primary-font-bold-italic">Lorem ipsum dolor sit amet</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"primary-font"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"primary-font-italic"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"primary-font-bold"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"primary-font-bold-italic"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="2-secondary-font" class="styleguide">Secondary Font</h1>
+
+<h3>Fira Sans (secondary font)</h3>
+<p class="styleguide">Font family used for headings. Remove all references to <code class="styleguide">.secondary-font</code> if
+project only uses one font.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <h4>A Heading</h4>
+<p class="secondary-font">Lorem ipsum dolor sit amet</p>
+<p class="secondary-font-italic">Lorem ipsum dolor sit amet</p>
+<p class="secondary-font-bold">Lorem ipsum dolor sit amet</p>
+<p class="secondary-font-bold-italic">Lorem ipsum dolor sit amet</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;h4&gt;</span>A Heading<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"secondary-font"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"secondary-font-italic"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"secondary-font-bold"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"secondary-font-bold-italic"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="3-headings" class="styleguide">Headings</h1>
+<p class="styleguide">Headings use secondary font by default - modify as needed per project.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;h1&gt;</span>Heading 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>Heading 2<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Heading 3<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>Heading 4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>Heading 5<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>Heading 6<span class="nt">&lt;/h6&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="4-font-sizing" class="styleguide">Font Sizing</h1>
+<p class="styleguide">Fonts are sized using <a class="styleguide" href="http://snook.ca/archives/html_and_css/font-size-with-rem" title="http://snook.ca/archives/html_and_css/font-size-with-rem">REMs</a>.
+Root font size is set to 10px (1rem) and all other elements are sized relative to that
+(so 1.2rem == 12px, 2.4rem == 24px etc).</p><p class="styleguide">Line heights are specified in decimal form (so 1.2 == 120%) with unit omitted
+(as this ensures child elements will inherit the raw number value, rather
+than the computed value on the parent element).</p><p class="styleguide">Default body font size is 14px (1.4rem).</p>
+<h3>Font sizing helper classes:</h3>
+<p class="styleguide">The following classes can be used to set the font size of a specific element.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <p class="text-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="text-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="text-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="text-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="text-18">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="text-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="text-22">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p class="text-24">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+<div class="text-10">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p class="text-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p class="text-14">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-10"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-12"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-14"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-16"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-18"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-20"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-22"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-24"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-10"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-12"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-14"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="5-links" class="styleguide">Links</h1>
+<p class="styleguide">Default link color is set to the <code class="styleguide">$primary-color</code> variable defined in <code class="styleguide">_colors.scss</code>.</p><p class="styleguide">Links in heading tags will inherit color from the heading (overriding default style).</p><div class="codeExample">
+  <div class="exampleOutput">
+    <a href="#">Default Link Style</a>
+<h2 class="text-black"><a href="#">Link Inside Heading</a></h2>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Default Link Style<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"text-black"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Link Inside Heading<span class="nt">&lt;/a&gt;&lt;/h2&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="6-lists" class="styleguide">Lists</h1>
+
+<h3>No list style</h3>
+<p class="styleguide">Removes default list styling (padding-left, margin, list bullets).</p><div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="no-list-style">
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"no-list-style"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Item one<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Item two<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Item three<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Navigation style</h3>
+<p class="styleguide">Removes default list styling and makes lis display inline-block.</p><p class="styleguide">Elements with the (optional) class <code class="styleguide">.nav-item</code> will display block with a bit of
+padding so links have more surface area, can have background colors applied etc.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="nav-style">
+  <li><a href="#" class="nav-item">Item one</a></li>
+  <li><a href="#" class="nav-item">Item two</a></li>
+  <li><a href="#" class="nav-item">Item three</a></li>
+</ul>
+<ul class="nav-style">
+  <li><a href="#" class="nav-item bg-grey-light">Item one</a></li>
+  <li><a href="#" class="nav-item bg-grey-light">Item two</a></li>
+  <li><a href="#" class="nav-item bg-grey-light">Item three</a></li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav-style"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>Item one<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>Item two<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item"</span><span class="nt">&gt;</span>Item three<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav-style"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light"</span><span class="nt">&gt;</span>Item one<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light"</span><span class="nt">&gt;</span>Item two<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"nav-item bg-grey-light"</span><span class="nt">&gt;</span>Item three<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="7-text-helpers" class="styleguide">Text Helpers</h1>
+
+<h4>Lowercase</h4>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p class="lowercase">LOREM IPSUM DOLOR SIT AMET.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lowercase"</span><span class="nt">&gt;</span>LOREM IPSUM DOLOR SIT AMET.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h4>Uppercase</h4>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p class="uppercase">lorem ipsum dolor sit amet.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"uppercase"</span><span class="nt">&gt;</span>lorem ipsum dolor sit amet.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h4>Align Left</h4>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p class="align-left">Lorem ipsum dolor sit amet.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"align-left"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h4>Align Centre</h4>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p class="align-center">Lorem ipsum dolor sit amet.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"align-center"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h4>Align Right</h4>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p class="align-right">Lorem ipsum dolor sit amet.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"align-right"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h4>Italic</h4>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <p class="italic">Lorem ipsum dolor sit amet.</p>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"italic"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet.<span class="nt">&lt;/p&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h4>Button line-height helper:</h4>
+<p class="styleguide">Matches text line-height to button height (makes text look vertically centered
+when displayed next to button).</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="clearfix">
+  <div class="float-left align-center half">
+    <a href="#" class="colour-btn-orange"><i class="fa fa-download"></i> Download</a>
+  </div>
+  <a href="#" class="float-right half align-center match-btn-height">More Details</a>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-left align-center half"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"colour-btn-orange"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-download"</span><span class="nt">&gt;&lt;/i&gt;</span> Download<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"float-right half align-center match-btn-height"</span><span class="nt">&gt;</span>More Details<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="8-icons" class="styleguide">Icons</h1>
+<p class="styleguide">Icon set created on <a class="styleguide" href="http://fontello.com/" title="http://fontello.com/">Fontello</a>. Latest version of the font kit can usually be
+found under relevant project folder on the clients server if you need to import
+it to add icons and re-export the kit.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div style="font-size: 30px;">
+  <i class="icon-search"></i>
+  <i class="icon-user"></i>
+  <i class="icon-down-big"></i>
+  <i class="icon-left"></i>
+  <i class="icon-right"></i>
+  <i class="icon-up"></i>
+  <i class="icon-left-big"></i>
+  <i class="icon-right-big"></i>
+  <i class="icon-up-big"></i>
+  <i class="icon-hazard"></i>
+  <i class="icon-tick"></i>
+  <i class="icon-close"></i>
+  <i class="icon-plus"></i>
+  <i class="icon-minus"></i>
+  <i class="icon-upload"></i>
+  <i class="icon-logout"></i>
+  <i class="icon-menu"></i>
+  <i class="icon-spinner"></i>
+  <i class="icon-mail"></i>
+  <i class="icon-mail-alt"></i>
+  <i class="icon-home"></i>
+  <i class="icon-edit"></i>
+  <i class="icon-facebook"></i>
+  <i class="icon-twitter"></i>
+  <i class="icon-delete"></i>
+  <i class="icon-calendar"></i>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"font-size: 30px;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-search"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-user"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-down-big"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-left"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-right"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-up"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-left-big"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-right-big"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-up-big"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-hazard"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-tick"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-close"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-plus"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-minus"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-upload"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-logout"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-menu"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-spinner"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-mail"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-mail-alt"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-home"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-edit"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-facebook"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-twitter"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-delete"</span><span class="nt">&gt;&lt;/i&gt;</span>
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon-calendar"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="hgt-footer">
+      Built using <a href="https://github.com/trulia/hologram">Hologram</a> and <a href="https://github.com/wearecube/hologram-github-theme">Hologram Github Theme</a>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="scripts/vendor/jquery.waypoints.min.js"></script>
+  <script src="scripts/vendor/sticky.min.js"></script>
+  <script src="scripts/vendor/infinite.min.js"></script>
+  <script src="scripts/hgt.js"></script>
+
+  
+
+  
+</body>
+</html>

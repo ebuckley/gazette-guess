@@ -1,0 +1,51 @@
+# Hologram will run from same directory where this config file resides
+# All paths should be relative to there
+
+# The directory containing the source files to parse recursively
+source: client/app/styles/
+
+# The directory that hologram will build to
+destination: styleguide/styleguide-site/
+
+# The style guide theme (required)
+documentation_assets: styleguide/styleguide-assets/hologram-github-theme/
+
+# The folder that contains templates for rendering code examples (required)
+code_example_templates: styleguide/styleguide-assets/code_example_templates/
+
+# The folder that contains custom code example renderers (required)
+code_example_renderers: styleguide/styleguide-assets/code_example_templates/
+
+# Files to be copied across to styleguide site's /assets directory
+# Add any extra asset directories/modify existing directory structure as needed
+dependencies:
+  - client/dist/assets
+  - client/dist/assets/images
+  - client/dist/assets/fonts
+
+# The main app css file to be loaded into the style guide site. Make sure it's
+# copied across from one of the directories defined above (this is just the link
+# that is used in the stylesheet include tag in the head of the styleguide pages)
+#
+# Update this file name to be the same as the main compiled project css file (leave
+# directory as assets/)
+css_include:
+  - 'assets/ember-styleguide.css'
+
+# The global title that is displayed at the top of the pages in the style guide
+global_title: Ember Style Guide
+
+# Category to use for index.html
+index: 1_colors
+
+# To additionally output navigation for top level sections, set the value to
+# 'section'. To output navigation for sub-sections,
+# set the value to `all`
+nav_level: section
+
+# Hologram displays warnings when there are issues with your docs
+# (e.g. if a component's parent is not found, if the _header.html and/or
+#  _footer.html files aren't found)
+# If you want Hologram to exit on these warnings, set the value to 'true'
+# (Default value is 'false')
+exit_on_warnings: false
