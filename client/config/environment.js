@@ -7,7 +7,7 @@ module.exports = function (environment) {
     environment: environment,
     rootURL: '/',
     apiNamespace: '/api',
-    apiHost: 'localhost:3001',
+    apiHost: '//localhost:3001',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

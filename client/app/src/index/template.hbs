@@ -1,1 +1,8 @@
 <h1> Welcome! </h1>
+{{#each model as |image|}}
+<section>
+  <img src="http://localhost:3001/api/image/{{image.id}}" alt="" />
+  <br/>
+  {{image.created_at}}
+</section>
+{{/each}}
