@@ -1,27 +1,9 @@
-define('client/tests/app.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | app.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'app.js should pass jshint.');
-  });
-});
 define('client/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
   exports['default'] = destroyApp;
 
   function destroyApp(application) {
     _ember['default'].run(application, 'destroy');
   }
-});
-define('client/tests/helpers/destroy-app.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | helpers/destroy-app.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'helpers/destroy-app.js should pass jshint.');
-  });
 });
 define('client/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'ember', 'client/tests/helpers/start-app', 'client/tests/helpers/destroy-app'], function (exports, _qunit, _ember, _clientTestsHelpersStartApp, _clientTestsHelpersDestroyApp) {
   var Promise = _ember['default'].RSVP.Promise;
@@ -49,15 +31,6 @@ define('client/tests/helpers/module-for-acceptance', ['exports', 'qunit', 'ember
     });
   };
 });
-define('client/tests/helpers/module-for-acceptance.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | helpers/module-for-acceptance.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'helpers/module-for-acceptance.js should pass jshint.');
-  });
-});
 define('client/tests/helpers/resolver', ['exports', 'client/resolver', 'client/config/environment'], function (exports, _clientResolver, _clientConfigEnvironment) {
 
   var resolver = _clientResolver['default'].create();
@@ -68,15 +41,6 @@ define('client/tests/helpers/resolver', ['exports', 'client/resolver', 'client/c
   };
 
   exports['default'] = resolver;
-});
-define('client/tests/helpers/resolver.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | helpers/resolver.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'helpers/resolver.js should pass jshint.');
-  });
 });
 define('client/tests/helpers/start-app', ['exports', 'ember', 'client/app', 'client/config/environment'], function (exports, _ember, _clientApp, _clientConfigEnvironment) {
   exports['default'] = startApp;
@@ -96,45 +60,9 @@ define('client/tests/helpers/start-app', ['exports', 'ember', 'client/app', 'cli
     return application;
   }
 });
-define('client/tests/helpers/start-app.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | helpers/start-app.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'helpers/start-app.js should pass jshint.');
-  });
-});
-define('client/tests/resolver.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | resolver.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'resolver.js should pass jshint.');
-  });
-});
-define('client/tests/router.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | router.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'router.js should pass jshint.');
-  });
-});
 define('client/tests/test-helper', ['exports', 'client/tests/helpers/resolver', 'ember-qunit'], function (exports, _clientTestsHelpersResolver, _emberQunit) {
 
   (0, _emberQunit.setResolver)(_clientTestsHelpersResolver['default']);
-});
-define('client/tests/test-helper.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | test-helper.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'test-helper.js should pass jshint.');
-  });
 });
 /* jshint ignore:start */
 

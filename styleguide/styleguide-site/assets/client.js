@@ -205,7 +205,9 @@ define('client/router', ['exports', 'ember', 'client/config/environment'], funct
     rootURL: _clientConfigEnvironment['default'].rootURL
   });
 
-  Router.map(function () {});
+  Router.map(function () {
+    this.route('index', { path: '/' });
+  });
 
   exports['default'] = Router;
 });
@@ -216,6 +218,106 @@ define('client/services/ajax', ['exports', 'ember-ajax/services/ajax'], function
       return _emberAjaxServicesAjax['default'];
     }
   });
+});
+define('client/src/index/route', ['exports', 'ember'], function (exports, _ember) {
+  var get = _ember['default'].get;
+  exports['default'] = _ember['default'].Route.extend({
+    model: function model() {
+      return {
+        loggedIn: get(this, 'session.isAuthenticated')
+      };
+    },
+    afterModel: function afterModel(model) {
+      this._super.apply(this, arguments);
+      // redirect to the dashboard
+      if (model.loggedIn) {
+        this.transitionTo('permits');
+      }
+    }
+  });
+});
+define("client/src/index/template", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@2.7.0",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 0
+          }
+        },
+        "moduleName": "client/src/index/template.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("h1");
+        var el2 = dom.createTextNode(" Welcome! ");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes() {
+        return [];
+      },
+      statements: [],
+      locals: [],
+      templates: []
+    };
+  })());
+});
+define("client/templates/application", ["exports"], function (exports) {
+  exports["default"] = Ember.HTMLBars.template((function () {
+    return {
+      meta: {
+        "revision": "Ember@2.7.0",
+        "loc": {
+          "source": null,
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 2,
+            "column": 0
+          }
+        },
+        "moduleName": "client/templates/application.hbs"
+      },
+      isEmpty: false,
+      arity: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      buildFragment: function buildFragment(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
+        var morphs = new Array(1);
+        morphs[0] = dom.createMorphAt(fragment, 0, 0, contextualElement);
+        dom.insertBoundary(fragment, 0);
+        return morphs;
+      },
+      statements: [["content", "outlet", ["loc", [null, [1, 0], [1, 10]]], 0, 0, 0, 0]],
+      locals: [],
+      templates: []
+    };
+  })());
 });
 /* jshint ignore:start */
 
@@ -249,7 +351,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("client/app")["default"].create({"name":"client","version":"0.0.0+a5b3a703"});
+  require("client/app")["default"].create({"name":"client","version":"0.0.0+b40071cd"});
 }
 
 /* jshint ignore:end */
