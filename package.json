@@ -1,0 +1,11 @@
+{
+  "name": "gazzette-guess",
+  "version": "1.0.0",
+  "description": "Gazzette guess is a game where you get to guess what year a news article came fromwq",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ersin",
+  "license": "ISC"
+}
