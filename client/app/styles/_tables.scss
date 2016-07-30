@@ -1,0 +1,97 @@
+/*doc
+---
+title: Table Styling
+name: 1-table-styling
+category: 7 Tables
+---
+
+```html_example
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Table Column 1</th>
+    <th>Table Column 2</th>
+    <th>Table Column 3</th>
+    <th class="align-right">Table Column 4</th>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">1</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">2</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">3</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+  <tr>
+    <td><a href="#" class="bold">4</a></td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td>Lorem ipsum dolor</td>
+    <td class="align-right">
+      <a href="#" class="margin-left-5">View</a>
+      <a href="#" class="margin-left-5">Edit</a>
+      <a href="#" class="margin-left-5">Delete</a>
+    </td>
+  </tr>
+</table>
+```
+
+*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  padding: 12px 12px 12px 0;
+  border-bottom: 2px solid $primary-color;
+  font-weight: bold;
+}
+
+td {
+  padding: 12px 12px 12px 0;
+  border-bottom: 1px solid $grey-light;
+  transition: background 200ms ease;
+}
+
+th:first-of-type,
+td:first-of-type {
+  padding-left: 5px;
+}
+
+tr:hover td {
+  background-color: $grey-extra-light;
+}
+
+table a {
+  @extend .primary-font;
+  font-size: 1.4rem;
+  color: $primary-color;
+}

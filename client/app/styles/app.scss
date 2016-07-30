@@ -1,0 +1,34 @@
+/******************************************************
+  RESET STYLES (not included in styleguide)
+******************************************************/
+@import "_reset.scss";
+
+/******************************************************
+  STYLEGUIDE CATEGORIES
+******************************************************/
+
+// 1. Colors - variables and color related helpers
+@import "_colors.scss";
+
+// 2. Typeography (fonts, headings, lists etc), icons (Fontello) and text size helpers
+@import "_typography.scss";
+
+// 3. Layout related: grid system, responsive containers, image wrappers etc.
+@import "_layout.scss";
+
+// 4. Helper classes: floats, text alignment, spacing, responsive visibility etc
+@import "_helpers.scss";
+
+// 5. Components: buttons, banners, alerts, modules etc.
+@import "_components.scss";
+
+// 6. Forms: default input styling and layout
+@import "_forms.scss";
+
+// 7. Tables: default table styling
+@import "_tables.scss";
+
+/******************************************************
+  MISC STYLES/OVERRIDES (not included in styleguide)
+******************************************************/
+@import "_misc.scss";

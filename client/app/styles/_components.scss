@@ -1,0 +1,275 @@
+/*doc
+---
+title: Buttons
+name: 0-buttons
+category: 5 Components
+---
+
+### Default Buttons
+Any element with a class containing `default-btn` will inherit default button
+styling (as displayed below).
+
+Different colored buttons can be created either by creating a style such as
+`default-btn-orange` or `default-btn-primary` (as used below) and setting the
+background and text color (as well as :hover and :active states if required).
+
+Alternatively, you can determine button colors on the fly in the markup by using
+existing color helper classes (as the last example below shows). Just be aware
+button styles created using this method won't have any rollover/active states by
+default.
+
+```html_example
+<a href="#" class="default-btn-primary">Anchor Tag</a>
+<a href="#" class="default-btn-disabled">Anchor Tag</a>
+<br/><br/>
+<button class="default-btn-primary">Button</button>
+<button class="default-btn-disabled">Button</button>
+<button class="link-style">Button</button>
+<br/><br/>
+<button class="default-btn bg-orange text-white">Button</button>
+<button class="default-btn bg-grey-dark text-white">Button</button>
+```
+
+### Small Buttons
+You can add the class `.default-btn-small` to create a smaller version. You may
+need to include multiple classes if you're wanting to determine the color also.
+For instance, if I wanted a small button the same color as the primary project
+color, I'd apply the following classes: `.default-btn-primary .default-btn-small`
+
+```html_example
+<a href="#" class="default-btn-primary default-btn-small">Small Button</a>
+<a href="#" class="default-btn-disabled default-btn-small">Small Button</a>
+<br/><br/>
+<button class="default-btn-primary default-btn-small">Small Button</button>
+<button class="default-btn-disabled default-btn-small">Small Button</button>
+```
+
+*/
+
+[class*='default-btn'],
+button,
+input[type='submit'] {
+  display: inline-block;
+  min-width: 80px;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  padding: 11px 20px;
+  border-radius: 3px;
+  border: none;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+  cursor: pointer;
+  @extend .primary-font-bold;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  transition: all 300ms ease;
+}
+
+[class*='default-btn']:hover,
+input[type='submit']:hover,
+button:hover {
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+[class*='default-btn']:active,
+input[type='submit']:active,
+button:active {
+  box-shadow: none;
+}
+
+.link-style,
+.link-style:hover,
+.link-style:focus {
+  @extend .primary-font;
+  font-size: 1.4rem;
+  color: $primary-color;
+  box-shadow: none;
+  background: none;
+  border: none;
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: underline;
+  text-shadow: none;
+  transition: none;
+}
+
+.default-btn-primary {
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.default-btn-primary:hover {
+  background-color: lighten($primary-color, 15%);
+}
+
+.default-btn-primary:active {
+  background-color: darken($primary-color, 15%);
+}
+
+.default-btn-disabled,
+.default-btn-disabled:hover,
+.default-btn-disabled:active {
+  background-color: $grey;
+  color: #fff;
+  border-color: $grey;
+  box-shadow: none;
+  pointer-events: none;
+  text-shadow: none;
+}
+
+.default-btn-small {
+  padding: 5px 10px;
+  font-size: 1rem;
+  min-width: none;
+}
+
+
+/*doc
+---
+title: Tabs
+name: 1-tabs
+category: 5 Components
+---
+
+The two examples below show two different layout options:
+
+- Tabs for use inside a container (`.max-1210` for example) or grid column
+(`.col-1-2` for example). The tabs will sit flush with the left side of the container
+with the baseline extending out to the full-width of the containing element.
+- Tabs for use outside of a container that need the baseline to span the width
+of the screen. The tabs are intended to be centered with a max-width by using a
+container class on the `.tabs-wrap` element (such as `.max-1210`).
+
+Both styles of tabs will stack on screens smaller than 768px.
+
+Styling of tab text/background/border colors can easily be adjusted using the appropriately
+named SASS variables defined above the main tab styles in the `_components.scss` file.
+
+```html_example
+<ul class="tabs-wrap">
+  <li class="tab-item"><a href="#" class="tab-link active">Tab One</a></li>
+  <li class="tab-item"><a href="#" class="tab-link">Tab Two</a></li>
+  <li class="tab-item"><a href="#" class="tab-link">Tab Three</a></li>
+  <li class="tab-item"><a href="#" class="tab-link">Tab Four</a></li>
+</ul>
+<br/><br/>
+<div class="full-width-tabs-wrap">
+  <ul class="tabs-wrap max-1210">
+    <li class="tab-item"><a href="#" class="tab-link">Tab One</a></li>
+    <li class="tab-item"><a href="#" class="tab-link active">Tab Two</a></li>
+    <li class="tab-item"><a href="#" class="tab-link">Tab Three</a></li>
+    <li class="tab-item"><a href="#" class="tab-link">Tab Four</a></li>
+  </ul>
+</div>
+```
+
+*/
+
+// Configure tab colors here:
+$tabOutlineColor: $grey-light;
+
+$inactiveTabBackground: $grey-light;
+$inactiveTabTextColor: $black;
+$inactiveTabHoverBackground: lighten($inactiveTabBackground, 3%);
+
+$activeTabBackground: $white;
+$activeTabTextColor: $black;
+
+// Main tab styles:
+.full-width-tabs-wrap {
+  width: 100%;
+  border-bottom: 1px solid $tabOutlineColor;
+
+  .tabs-wrap {
+    margin-bottom: -1px;
+  }
+}
+
+.tabs-wrap {
+  @extend .no-list-style;
+  position: relative;
+}
+
+.tabs-wrap:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: $tabOutlineColor;
+}
+
+.tabs-wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.tab-item {
+  display: inline-block;
+}
+
+.tab-link {
+  display: block;
+  line-height: 1;
+  padding: 10px 30px;
+  color: $inactiveTabTextColor;
+  background: $inactiveTabBackground;
+  border: 1px solid $tabOutlineColor;
+  border-bottom: none;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: background 300ms ease;
+  transition: background 300ms ease;
+}
+
+@media screen and (max-width: 767px) {
+
+  .tab-item {
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  .tab-link {
+    padding: 10px;
+    border-bottom: 1px solid $tabOutlineColor;
+
+    &.active {
+      background: $activeTabBackground;
+      color: $activeTabTextColor;
+      border-color: $tabOutlineColor;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .tab-link {
+
+    &:hover {
+      background: $inactiveTabHoverBackground;
+      border-color: $inactiveTabHoverBackground;
+      border-bottom: 1px solid $tabOutlineColor;
+      padding-bottom: 9px;
+    }
+
+    &.active,
+    &.active:hover {
+      background: $activeTabBackground;
+      color: $activeTabTextColor;
+      z-index: 2;
+      border-color: $tabOutlineColor;
+      border-bottom: none;
+      padding-bottom: 10px;
+    }
+
+  }
+
+}

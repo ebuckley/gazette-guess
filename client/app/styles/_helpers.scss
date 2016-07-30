@@ -1,0 +1,198 @@
+/*doc
+---
+title: Helpers
+name: 1-helpers
+category: 4 Helpers
+---
+
+### Clearfix
+```html_example
+<div class="clearfix bg-grey-dark">
+  <div class="bg-grey" style="width: 50%;height: 50px;float: left;"></div>
+  <div class="bg-grey-light" style="width: 50%;height: 30px;float: left;"></div>
+</div>
+```
+
+### Float left
+```html_example
+<div class="clearfix">
+  <div class="float-left bg-grey" style="width: 20px;height: 20px;"></div>
+</div>
+```
+
+### Float right
+```html_example
+<div class="clearfix">
+  <div class="float-right bg-grey" style="width: 20px;height: 20px;"></div>
+</div>
+```
+
+### Margin bottom (5px)
+```html_example
+<div class="margin-btm-5">First Item</div>
+<div>Second Item</div>
+```
+
+### Margin bottom (10px)
+```html_example
+<div class="margin-btm-10">First Item</div>
+<div>Second Item</div>
+```
+### Margin bottom (15px)
+```html_example
+<div class="margin-btm-15">First Item</div>
+<div>Second Item</div>
+```
+
+### Margin bottom (20px)
+```html_example
+<div class="margin-btm-20">First Item</div>
+<div>Second Item</div>
+```
+
+### Margin bottom (30px)
+```html_example
+<div class="margin-btm-30">First Item</div>
+<div>Second Item</div>
+```
+### Margin bottom (40px)
+```html_example
+<div class="margin-btm-40">First Item</div>
+<div>Second Item</div>
+```
+
+### Margin bottom (50px)
+```html_example
+<div class="margin-btm-50">First Item</div>
+<div>Second Item</div>
+```
+### Margins left & right
+```html_example
+<ul class="nav-style margin-btm-20">
+  <li><a href="#" class="nav-item bg-grey-light">No margin left</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-5">Item one</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-10">Item two</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-15">Item three</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-left-20">Item four</a></li>
+  <li><a href="#" class="nav-item bg-grey-light">No margin left</a></li>
+</ul>
+
+<ul class="nav-style">
+  <li><a href="#" class="nav-item bg-grey-light">No margin right</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-5">Item one</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-10">Item two</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-15">Item three</a></li>
+  <li><a href="#" class="nav-item bg-grey-light margin-right-20">Item four</a></li>
+  <li><a href="#" class="nav-item bg-grey-light">No margin right</a></li>
+</ul>
+```
+
+### Hide element on mobile (screen width < 768px)
+```html_example
+<div class="hide-mob">Hidden on mobile (resize window to test)</div>
+```
+
+### Hide element on portrait tablet up (screen width >= 768px)
+```html_example
+<div class="hide-tablet-up">Hidden on tablet up (resize window to test)</div>
+```
+
+### Hide element on desktop screens (screen width >= 1024px)
+```html_example
+<div class="hide-desktop">Hidden on desktop (resize window to test)</div>
+```
+
+*/
+
+.clearfix:after,
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.margin-btm-5 {
+  margin-bottom: 5px;
+}
+
+.margin-btm-10 {
+  margin-bottom: 10px;
+}
+
+.margin-btm-15 {
+  margin-bottom: 15px;
+}
+
+.margin-btm-20 {
+  margin-bottom: 20px;
+}
+
+.margin-btm-30 {
+  margin-bottom: 30px;
+}
+
+.margin-btm-40 {
+  margin-bottom: 40px;
+}
+
+.margin-btm-50 {
+  margin-bottom: 50px;
+}
+
+.margin-left-20 {
+  margin-left: 20px;
+}
+
+.margin-left-15 {
+  margin-left: 15px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.margin-left-5 {
+  margin-left: 5px;
+}
+
+.margin-right-20 {
+  margin-right: 20px;
+}
+
+.margin-right-15 {
+  margin-right: 15px;
+}
+
+.margin-right-10 {
+  margin-right: 10px;
+}
+
+.margin-right-5 {
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  .hide-mob {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hide-tablet-up {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hide-desktop {
+    display: none;
+  }
+}

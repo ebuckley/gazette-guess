@@ -1,0 +1,154 @@
+/*doc
+---
+title: Color Variables
+name: 1-color-variables
+category: 1 Colors
+---
+
+The following sass variables can be used throughout stylesheets:
+
+| Variable | Hex Value | Swatch |
+|:--------------|:----------|:------------------------|
+| `$white`      | `#FFFFFF` | <div class="bg-white" style="display: inline-block;height: 30px;width: 60px;"></div> |
+| `$black`      | `#333333` | <div class="bg-black" style="display: inline-block;height: 30px;width: 60px;"></div> |
+| `$grey-dark`  | `#BBBBBB` | <div class="bg-grey-dark" style="display: inline-block;height: 30px;width: 60px;"></div> |
+| `$grey`       | `#D4D4D4` | <div class="bg-grey" style="display: inline-block;height: 30px;width: 60px;"></div> |
+| `$grey-light` | `#EEEEEE` | <div class="bg-grey-light" style="display: inline-block;height: 30px;width: 60px;"></div> |
+| `$grey-extra-light` | `#F5F5F5` | <div class="bg-grey-extra-light" style="display: inline-block;height: 30px;width: 60px;"></div> |
+| `$orange`     | `#F27C00` | <div class="bg-orange" style="display: inline-block;height: 30px;width: 60px;"></div> |
+| `$red`        | `#FF0000` | <div class="bg-red" style="display: inline-block;height: 30px;width: 60px;"></div> |
+
+
+### Primary Color Variable
+Variable called `$primary-color` is used for default link color etc. Change this
+to be the dominant brand color throughout the project (or whatever color you want
+the links to be).
+
+| Variable | Hex Value | Swatch |
+|:------------------|:-----------|:------------------------|
+| `$primary-color`  | `#F27C00`  | <div class="bg-primary-color" style="display: inline-block;height: 30px;width: 60px;"></div> |
+
+*/
+
+$white: #ffffff;
+$black: #333333;
+
+$grey: #d4d4d4;
+$grey-dark: darken($grey, 10%);
+$grey-light: lighten($grey, 7%);
+$grey-extra-light: lighten($grey, 13%);
+
+$orange: #f27c00;
+$red: #ff0000;
+
+$primary-color: $orange;
+
+
+/*doc
+---
+title: Background Colors
+name: 2-background-colors
+category: 1 Colors
+---
+
+These classes can be used to apply background color to elements.
+
+```html_example
+<div class="bg-white"><br/></div>
+<div class="bg-black"><br/></div>
+<div class="bg-grey"><br/></div>
+<div class="bg-grey-dark"><br/></div>
+<div class="bg-grey-light"><br/></div>
+<div class="bg-orange"><br/></div>
+<div class="bg-red"><br/></div>
+```
+
+*/
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+.bg-grey-dark {
+  background-color: $grey-dark;
+}
+
+.bg-grey-light {
+  background-color: $grey-light;
+}
+
+.bg-grey-extra-light {
+  background-color: $grey-extra-light;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+.bg-primary-color {
+  background-color: $primary-color;
+}
+
+/*doc
+---
+title: Text Colors
+name: 3-text-colors
+category: 1 Colors
+---
+
+These classes can be used to apply text colors to elements.
+
+```html_example
+<div class="text-white bg-black"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+<div class="text-black"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+<div class="text-grey"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+<div class="text-grey-dark"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+<div class="text-grey-light"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+<div class="text-orange"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+<div class="text-red"><p>Lorem Ipsum Dolor Sit Amet</p></div>
+```
+*/
+
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-grey {
+  color: $grey;
+}
+
+.text-grey-dark {
+  color: $grey-dark;
+}
+
+.text-grey-light {
+  color: $grey-light;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-primary-color {
+  color: $primary-color;
+}

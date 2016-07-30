@@ -1,0 +1,175 @@
+/*doc
+---
+title: Responsive Containers
+name: 1-responsive-containers
+category: 3 Layout
+---
+
+Fluid, horizontally-centered containers with max-width declared. Includes 20px
+padding either side of container so that there will always be a gap between the
+edge of the screen and the container.
+
+As an example, the `.max-1210` container has 1170px of available space.
+
+```html_example
+<div class="max-1210">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+```
+
+*/
+
+[class*='max-'] {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[class*='max-']:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.max-1210 {
+  max-width: 1210px;
+}
+
+/*doc
+---
+title: Responsive Grids
+name: 2-grids
+category: 3 Layout
+---
+
+Default grid layout. Each row needs to have a wrapper element with the class
+`.grid-row`.
+
+Column classes are structured in a ratio kind of format. For example,
+a column of one third would need the class `.col-1-3`, two thirds would be
+`.col-2-3` etc.
+
+All column options: `col-1-2`, `col-1-3`, `col-1-4`, `col-2-3`, `col-2-4`,
+`col-3-4`, `col-1-8`.
+
+```html_example
+<div class="grid-row">
+  <div class="col-2-3" style="border: 1px solid #ccc;">
+    <h1>Column One Content</h1>
+    <div class="grid-row">
+      <div class="col-1-3 bg-grey-light" style="border: 1px solid #ccc;"><h2>Nested Column 1</h2></div>
+      <div class="col-1-3 bg-grey" style="border: 1px solid #ccc;"><h2>Nested Column 2</h2></div>
+      <div class="col-1-3 bg-grey-light" style="border: 1px solid #ccc;"><h2>Nested Column 3</h2></div>
+    </div>
+  </div>
+  <div class="col-1-3" style="border: 1px solid #ccc;">
+    <h1>Column Two Content</h1>
+  </div>
+</div>
+```
+
+### Empty Columns
+
+The psuedo selector `:last-of-type` is used to remove padding from the last element
+in a row to keep spacing consistent without breaking out of the container.
+
+If you don't want to fill all columns before starting a new row but wish to
+retain the correct spacing without adding an empty spacer element, use the class
+`.not-end-col` on the last column in the row.
+
+```html_example
+<div class="grid-row">
+  <div class="col-1-3" style="border: 1px solid #ccc;">
+    <div class="bg-grey-light">Without .not-end-col class.</div>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="col-1-3 not-end-col" style="border: 1px solid #ccc;">
+    <div class="bg-grey-light">With .not-end-col class.</div>
+  </div>
+</div>
+<div class="grid-row">
+  <div class="col-1-3" style="border: 1px solid #ccc;">
+    <div class="bg-grey-light">Content that goes on and on.</div>
+  </div>
+  <div class="col-1-3" style="border: 1px solid #ccc;">
+    <div class="bg-grey-light">Content that goes on and on.</div>
+  </div>
+  <div class="col-1-3" style="border: 1px solid #ccc;">
+    <div class="bg-grey-light">Content that goes on and on.</div>
+  </div>
+</div>
+```
+*/
+
+$pad: 30px;
+
+.grid-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-right: $pad;
+
+  .grid-row &:last-of-type {
+    padding-right: 0;
+  }
+
+  /*
+    Used to correct spacing where row has empty columns
+    (avoids need for empty divs)
+  */
+  .grid-row &.not-end-col {
+    padding-right: $pad;
+  }
+}
+
+.col-2-3 {
+  width: 66.66%;
+}
+
+.col-1-3 {
+  width: 33.33%;
+}
+
+.col-1-2,
+.col-2-4 {
+  width: 50%;
+}
+
+.col-1-4 {
+  width: 25%;
+}
+
+.col-3-4 {
+  width: 75%;
+}
+
+.col-1-8 {
+  width: 12.5%;
+}
+
+/* Opt-in outside padding */
+.grid-pad {
+  padding: $pad 0 $pad $pad;
+
+  [class*='col-']:last-of-type {
+    padding-right: $pad;
+  }
+}
+
+/* Columns revert to 100% width on mobile devices */
+@media screen and (max-width: 767px) {
+
+  [class*='col-'] {
+    float: none;
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 0 40px 0;
+  }
+
+}

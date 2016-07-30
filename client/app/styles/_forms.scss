@@ -1,0 +1,637 @@
+/*doc
+---
+title: Form Elements
+name: 1-form-elements
+category: 6 Forms
+---
+
+```html_example
+<div class="element-wrap">
+  <label for="input-1">Name <span class="text-red">*</span></label>
+  <input type="text" id="input-1" placeholder="Placeholder text..." />
+</div>
+
+<div class="element-wrap">
+  <label for="input-2">Email <span class="text-red">*</span></label>
+  <input type="email" id="input-2" placeholder="Placeholder text..." />
+</div>
+
+<div class="element-wrap">
+  <label for="input-3">Password <span class="text-red">*</span></label>
+  <input type="password" id="input-3" placeholder="Placeholder text..." />
+</div>
+
+<div class="element-wrap">
+  <label for="input-4">Description</label>
+  <textarea id="input-4" placeholder="Placeholder text..."></textarea>
+</div>
+
+<div class="element-wrap">
+  <label for="input-5">Category</label>
+  <select id="input-5">
+    <option>Please Select&hellip;</option>
+    <option>Option One</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </select>
+</div>
+
+<label class="element-wrap">
+  <input type="radio" name="radio" />
+  Radio label
+</label>
+
+<label class="element-wrap">
+  <input type="checkbox" name="checkbox" />
+  Checkbox label
+</label>
+
+```
+
+*/
+
+label {
+  @extend .primary-font-bold;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  @extend .primary-font;
+  background: #fff;
+  display: block;
+  width: 100%;
+  border: 1px solid $grey-dark;
+  border-radius: 3px;
+  padding: 7px 10px;
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+$elementSpacingBottom: 25px;
+
+select {
+  height: 35px;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  margin: 0 10px 0 0;
+}
+
+/*doc
+---
+title: Error Placement
+name: 2-error-placement
+category: 6 Forms
+---
+
+```html_example
+<div class="element-wrap">
+  <label for="input-1">Name <span class="text-red">*</span></label>
+  <input type="text" id="input-1" placeholder="Placeholder text..." />
+  <div class="error">Please enter a value.</div>
+</div>
+
+<div class="element-wrap">
+  <label for="input-2">Email <span class="text-red">*</span></label>
+  <input type="email" id="input-2" placeholder="Placeholder text..." class="field-error" />
+  <div class="error">Please enter a value.</div>
+</div>
+
+<div class="element-wrap">
+  <label for="input-3">Password <span class="text-red">*</span></label>
+  <input type="password" id="input-3" placeholder="Placeholder text..." />
+  <div class="error">Please enter a value.</div>
+</div>
+
+<div class="element-wrap">
+  <label for="input-4">Description</label>
+  <textarea id="input-4" placeholder="Placeholder text..."></textarea>
+  <div class="error">Please enter a value.</div>
+</div>
+
+<div class="element-wrap">
+  <label for="input-5">Category</label>
+  <select id="input-5">
+    <option>Please Select&hellip;</option>
+    <option>Option One</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </select>
+  <div class="error">Please enter a value.</div>
+</div>
+
+<label class="element-wrap">
+  <input type="radio" name="radio" />
+  Radio label
+  <span class="error">Please enter a value.</span>
+</label>
+
+<label class="element-wrap">
+  <input type="checkbox" name="checkbox" />
+  Checkbox label
+  <span class="error">Please enter a value.</span>
+</label>
+
+<div class="element-group-wrap">
+  <h3 class="element-group-label">Radio Buttons Label</h3>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option One
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Two
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Three
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Four
+  </label>
+  <div class="error">Please enter a value.</div>
+</div>
+
+<div class="element-group-wrap-block">
+  <h3 class="element-group-label">Checkboxes Heading</h3>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option One
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Two
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Three
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Four
+  </label>
+  <div class="error">Please enter a value.</div>
+</div>
+
+```
+
+*/
+
+.error {
+  @extend .primary-font;
+  display: block;
+  color: $red;
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+
+  &.field-error {
+    border-color: $red;
+  }
+}
+
+/*doc
+---
+title: Inline Labels
+name: 3-inline-labels
+category: 6 Forms
+---
+
+## Displaying labels inline
+Checkboxes and radios will display labels inline by default (see group elements
+explanation below) but you'll need to add an `.inline-label` class to the element
+wrapper for other input types (such as text, email, selects etc.)
+
+You can use the helper classes `.narrow-label` and `.wide-label` on the element
+wrapper to adjust the widths of the label/input. If the widths still don't suit
+after trying these helpers then you can either adjust the widths set below or
+target the elements directly via custom styles.
+
+`.align-right` helper can be used directly on the label element to align label
+text right.
+
+```html_example
+<h3>Normal inline label (widths: 17%/83% split)</h3>
+<div class="element-wrap inline-label">
+  <label for="input-2">Normal width label<span class="text-red">*</span></label>
+  <input type="email" id="input-2" placeholder="Placeholder text..." />
+</div>
+<br/>
+<h3>Narrow inline label (widths: 10%/90% split)</h3>
+<div class="element-wrap inline-label narrow-label">
+  <label for="input-2">Short label<span class="text-red">*</span></label>
+  <input type="email" id="input-2" placeholder="Placeholder text..." />
+</div>
+<br/>
+<h3>Wide inline label (widths: 25%/75% split)</h3>
+<div class="element-wrap inline-label wide-label">
+  <label for="input-2">Long label that needs space <span class="text-red">*</span></label>
+  <input type="email" id="input-2" placeholder="Placeholder text..." />
+</div>
+<br/>
+<h3>Alignment class helper used on label to align right</h3>
+<div class="element-wrap inline-label">
+  <label for="input-2" class="align-right">Right aligned <span class="text-red">*</span></label>
+  <input type="email" id="input-2" placeholder="Placeholder text..." />
+</div>
+```
+
+*/
+
+.inline-label {
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  textarea,
+  select {
+    display: inline-block;
+    width: calc(83% - 15px);
+  }
+
+  label {
+    display: inline-block;
+    width: 17%;
+    margin-right: 10px;
+  }
+
+  &.narrow-label {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+      width: calc(90% - 15px);
+    }
+
+    label {
+      width: 10%;
+    }
+
+  }
+
+  &.wide-label {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea,
+    select {
+      width: calc(75% - 15px);
+    }
+
+    label {
+      width: 25%;
+    }
+
+  }
+
+}
+
+/*doc
+---
+title: Form Element Groups
+name: 4-form-element-groups
+category: 6 Forms
+---
+
+## Displaying group elements inline
+
+```html_example
+<div class="element-group-wrap">
+  <h3 class="element-group-label">Radio Buttons Label</h3>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option One
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Two
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Three
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Four
+  </label>
+</div>
+
+<div class="element-group-wrap">
+  <h3 class="element-group-label">Checkbox Buttons Label</h3>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option One
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Two
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Three
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Four
+  </label>
+</div>
+```
+
+## Displaying group elements stacked
+
+```html_example
+<div class="element-group-wrap-block">
+  <h3 class="element-group-label">Radio Buttons Heading</h3>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option One
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Two
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Three
+  </label>
+  <label class="element-wrap">
+    <input type="radio" name="group-name" />
+    Option Four
+  </label>
+</div>
+
+<div class="element-group-wrap-block">
+  <h3 class="element-group-label">Checkboxes Heading</h3>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option One
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Two
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Three
+  </label>
+  <label class="element-wrap">
+    <input type="checkbox" name="group-name" />
+    Option Four
+  </label>
+</div>
+```
+
+## Displaying group elements inline, but in halves/thirds
+
+```html_example
+<div style="max-width: 400px;">
+  <div class="element-group-wrap halves">
+    <h3 class="element-group-label">Radio Buttons Heading</h3>
+    <label class="element-wrap">
+      <input type="radio" name="group-name" />
+      Option One
+    </label>
+    <label class="element-wrap">
+      <input type="radio" name="group-name" />
+      Option Two
+    </label>
+    <label class="element-wrap">
+      <input type="radio" name="group-name" />
+      Option Three
+    </label>
+    <label class="element-wrap">
+      <input type="radio" name="group-name" />
+      Option Four
+    </label>
+  </div>
+</div>
+<div style="max-width: 600px;">
+  <div class="element-group-wrap thirds">
+    <h3 class="element-group-label">Checkboxes Heading</h3>
+    <label class="element-wrap">
+      <input type="checkbox" name="group-name" />
+      Option One
+    </label>
+    <label class="element-wrap">
+      <input type="checkbox" name="group-name" />
+      Option Two
+    </label>
+    <label class="element-wrap">
+      <input type="checkbox" name="group-name" />
+      Option Three
+    </label>
+    <label class="element-wrap">
+      <input type="checkbox" name="group-name" />
+      Option Four
+    </label>
+    <label class="element-wrap">
+      <input type="checkbox" name="group-name" />
+      Option Five
+    </label>
+    <label class="element-wrap">
+      <input type="checkbox" name="group-name" />
+      Option Six
+    </label>
+  </div>
+</div>
+```
+*/
+
+[class*='element-wrap'],
+[class*='element-group-wrap'] {
+  margin: 0 0 $elementSpacingBottom 0;
+}
+
+.element-wrap,
+.element-wrap-group {
+  display: block;
+  width: 100%;
+}
+
+.element-group-wrap-block .element-wrap {
+  display: block;
+  width: 100%;
+  margin: 5px 0 0 0;
+  line-height: 1.5;
+}
+
+.element-group-label {
+  display: block;
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #000;
+}
+
+.element-group-wrap label,
+.element-group-wrap input,
+.element-group-wrap-block label,
+.element-group-wrap-block input {
+  @extend .primary-font;
+  font-size: 1.6rem;
+  line-height: 1;
+  display: inline-block;
+  color: #515151;
+}
+
+.element-group-wrap {
+  .element-wrap {
+    display: inline-block;
+    width: auto;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+
+  &.halves .element-wrap {
+    width: 49%;
+    margin-right: 0;
+    padding-right: 10px;
+    line-height: 1.5;
+  }
+
+  &.thirds .element-wrap {
+    width: 32%;
+    margin-right: 0;
+    padding-right: 10px;
+    line-height: 1.5;
+  }
+}
+
+
+/*doc
+---
+title: Form Layout Using Grids
+name: 5-form-layout
+category: 6 Forms
+---
+
+```html_example
+<form action="#" method="post">
+  <fieldset class="grid">
+    <div class="col-1-4">
+      <div class="element-wrap">
+        <label for="input-1">Input Label</label>
+        <input type="text" id="input-1" placeholder="Placeholder text..." />
+      </div>
+    </div>
+    <div class="col-1-4">
+      <div class="element-wrap">
+        <label for="input-2">Textarea Label</label>
+        <textarea id="input-2" placeholder="Placeholder text..."></textarea>
+      </div>
+    </div>
+    <div class="col-1-4">
+      <div class="element-wrap">
+        <label for="input-3">Input Label</label>
+        <input type="password" id="input-3" placeholder="Placeholder text..." />
+      </div>
+    </div>
+    <div class="col-1-4">
+      <div class="element-wrap">
+        <label for="input-4">Input Label</label>
+        <input type="email" id="input-4" placeholder="Placeholder text..." />
+      </div>
+    </div>
+  </fieldset>
+  <fieldset class="grid">
+    <div class="col-1-2">
+      <div class="element-group-wrap halves">
+        <h3 class="element-group-label">Radio Buttons Heading</h3>
+        <label class="element-wrap">
+          <input type="radio" name="group-name" />
+          Option One
+        </label>
+        <label class="element-wrap">
+          <input type="radio" name="group-name" />
+          Option Two
+        </label>
+        <label class="element-wrap">
+          <input type="radio" name="group-name" />
+          Option Three
+        </label>
+        <label class="element-wrap">
+          <input type="radio" name="group-name" />
+          Option Four
+        </label>
+      </div>
+    </div>
+    <div class="col-1-2">
+      <div class="element-wrap">
+        <label for="input-7">Select Label</label>
+        <select id="input-7">
+          <option>Option One</option>
+          <option>Option Two</option>
+          <option>Option Three</option>
+        </select>
+      </div>
+    </div>
+  </fieldset>
+</form>
+```
+*/
