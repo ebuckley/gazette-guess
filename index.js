@@ -59,7 +59,7 @@ const getImageMetaData = page => {
     uri: parsedURL,
     qs: {
       page,
-      sort: 'date'
+      sort: '-date'
     }
   })
 }
