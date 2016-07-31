@@ -2,8 +2,7 @@
 <a href="#" {{action 'previous'}}>Previous</a> <a href="#" {{action 'next'}}>Next</a>
 {{#each model as |image|}}
 <section>
-  <img src="http://localhost:3001/api/image/{{image.id}}" alt="" />
+  <img src="{{image.imageUrl}}" alt="" />
   <br/>
-  {{image.created_at}}
 </section>
 {{/each}}
