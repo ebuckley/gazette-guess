@@ -11,18 +11,25 @@ body {
 #title {
   font-size: 24px;
   color: #301800;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 #date {
   font-size: 18px;
   color: #301800;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #picture {
   border: 5px solid white;
-  outline: 1px solid #DEB887;
+  /* outline: 1px solid #DEB887; */
+  outline: 1px solid #CCC;
+  margin-bottom: 20px;
+}
+
+#people {
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 /*************************************************
