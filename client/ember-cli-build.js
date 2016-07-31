@@ -19,5 +19,14 @@ module.exports = function (defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import("bower_components/timbre.js/timbre.dev.js")
+  app.import("bower_components/timbre.js/misc/js/jquery.js")
+  app.import("bower_components/timbre.js/misc/js/codemirror.js")
+  app.import("bower_components/timbre.js/misc/js/javascript.js")
+  app.import("bower_components/timbre.js/misc/js/xml.js")
+  app.import("bower_components/timbre.js/misc/js/htmlmixed.js")
+  app.import("bower_components/timbre.js/misc/js/subcollider.js")
+  app.import("bower_components/timbre.js/misc/js/common.js")
+
   return app.toTree()
 }

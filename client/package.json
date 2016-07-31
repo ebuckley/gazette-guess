@@ -42,6 +42,7 @@
     "ember-resolver": "^2.0.3",
     "ember-welcome-page": "^1.0.1",
     "loader.js": "^4.0.1",
+    "momentjs": "^1.1.14",
     "nlp_compromise": "^6.5.0"
   },
   "dependencies": {

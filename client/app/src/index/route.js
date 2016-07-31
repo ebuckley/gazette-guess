@@ -9,6 +9,10 @@ export default Ember.Route.extend({
     return this.store.query('ImageMetadata', {
       page: get(this, 'page')
     })
+    .then(im => {
+      return im.toArray()[0]
+      // set(this, 'active', im.toArray()[0])
+    })
   },
   actions: {
     previous () {

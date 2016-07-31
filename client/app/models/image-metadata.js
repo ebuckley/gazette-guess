@@ -7,7 +7,8 @@ export default DS.Model.extend({
   updated_at: attr(),
   created_at: attr(),
   title: attr(),
-  displayDate: attr(),
+  description: attr(),
+  display_date: attr(),
   imageUrl: computed('id', function () {
     return config.apiHost + config.apiNamespace + '/image/' + get(this, 'id')
   })

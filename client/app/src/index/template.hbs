@@ -1,4 +1,4 @@
-<h1> Welcome! </h1>
+{{!-- <h1> Welcome! </h1>
 <a href="#" {{action 'previous'}}>Previous</a> <a href="#" {{action 'next'}}>Next</a>
 {{#each model as |image|}}
 <section>
@@ -6,3 +6,7 @@
   <br/>
 </section>
 {{/each}}
+ --}}
+<div>
+ {{record-detail record=model}}
+</div>
