@@ -11,7 +11,6 @@ export default Ember.Route.extend({
     })
     .then(im => {
       return im.toArray()[0]
-      // set(this, 'active', im.toArray()[0])
     })
   },
   actions: {
